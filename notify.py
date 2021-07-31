@@ -1,7 +1,7 @@
 from plyer import notification
 import requests
 from bs4 import BeautifulSoup
-
+import time
 
 
 def notifyMe(title, message):
@@ -49,5 +49,6 @@ if __name__ == '__main__':
         if stateName in ['State Name: Odisha','State Name: Andhra Pradesh'] :  # Can add other states
             print(stat)
             nTitle = "COVID-19 Info"
-            nText = f"{stateName}  {totalConfirmed}  {totalCured}  {totalDeaths}"
+            nText = f"{stateName}\n{totalConfirmed}\n{totalCured}  {totalDeaths}"
             notifyMe(nTitle, nText)
+            time.sleep(3)
