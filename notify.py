@@ -43,7 +43,7 @@ if __name__ == '__main__':
         Deaths.append(item.get_text().replace(u'\xa0', u' '))
 
     x = zip(StateName,Confirmed,Cured,Deaths)
-    x = list(x)
+    # x = list(x)
     for stat in x:
         stateName,totalConfirmed,totalCured,totalDeaths = stat
         if stateName in ['State Name: Odisha','State Name: Andhra Pradesh'] :  # Can add other states
